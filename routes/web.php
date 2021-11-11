@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StaterkitController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -19,5 +18,11 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return "ini landing page kalo mau";
 })->name('home');
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-Auth::routes();
+Route::prefix('dashboard')->middleware('role:admin')->group(function () {
+    Route::get('/', [DashboardController::class, 'index']);
+});
+Auth::routes([
+    'register' => false, // Registration Routes...
+    'reset' => false, // Password Reset Routes...
+    'verify' => false, // Email Verification Routes...
+]);
