@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaterkitController;
 use Illuminate\Support\Facades\Auth;
@@ -15,6 +16,8 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', [StaterkitController::class, 'home'])->name('home');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', function () {
+    return "ini landing page kalo mau";
+})->name('home');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Auth::routes();
