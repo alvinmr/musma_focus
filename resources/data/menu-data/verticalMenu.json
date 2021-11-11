@@ -12,13 +12,13 @@
       "slug": "",
       "submenu": [
         {
-          "url": "/master/calon",
+          "url": "/dashboard/calon",
           "name": "Data Calon",
           "icon": "user",
           "slug": "data-calon"
         },
         {
-          "url": "/master/pemilih",
+          "url": "/dashboard/pemilih",
           "name": "Data Pemilih",
           "icon": "users",
           "slug": "data-pemilih"
