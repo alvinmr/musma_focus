@@ -7,43 +7,35 @@
       "slug": "home"
     },
     {
-      "name": "Page Layouts",
-      "icon": "mail",
+      "name": "Master Data",
+      "icon": "database",
       "slug": "",
-      "badge": "5",
-      "badgeClass": "badge rounded-pill badge-light-danger ms-auto me-1",
       "submenu": [
         {
-          "url": "layouts/collapsed-menu",
-          "name": "Collapsed Menu",
-          "icon": "circle",
-          "slug": "collapsed-menu"
+          "url": "/master/calon",
+          "name": "Data Calon",
+          "icon": "user",
+          "slug": "data-calon"
         },
         {
-          "url": "layouts/full",
-          "name": "Layout Full",
-          "icon": "circle",
-          "slug": "layout-full"
-        },
-        {
-          "url": "layouts/without-menu",
-          "name": "Without Menu",
-          "icon": "circle",
-          "slug": "without-menu"
-        },
-        {
-          "url": "layouts/empty",
-          "name": "Layout Empty",
-          "icon": "circle",
-          "slug": "layout-empty"
-        },
-        {
-          "url": "layouts/blank",
-          "name": "Layout Blank",
-          "icon": "circle",
-          "slug": "layout-blank"
+          "url": "/master/pemilih",
+          "name": "Data Pemilih",
+          "icon": "users",
+          "slug": "data-pemilih"
         }
       ]
+    },
+    {
+      "url": "/hasil-pemilihan",
+      "name": "Hasil Pemilihan",
+      "icon": "bar-chart",
+      "slug": "hasil-pemilihan"
+    },
+    {
+      "url": "/master/waktu",
+      "name": "Setting Waktu",
+      "icon": "clock",
+      "slug": "setting-waktu"
     }
   ]
 }
