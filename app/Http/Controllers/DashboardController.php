@@ -24,7 +24,7 @@ class DashboardController extends Controller
     public function index()
     {
         $breadcrumbs = [
-            ['link' => "home", 'name' => "Home"], ['name' => "Index"]
+            ['link' => "dashboard", 'name' => "Dashboard"], ['name' => "Index"]
         ];
         return view('content.home', ['breadcrumbs' => $breadcrumbs]);
     }

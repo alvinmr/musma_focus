@@ -12,10 +12,10 @@
       "slug": "",
       "submenu": [
         {
-          "url": "/dashboard/calon",
-          "name": "Data Calon",
+          "url": "/dashboard/kandidat",
+          "name": "Data Kandidat",
           "icon": "user",
-          "slug": "data-calon"
+          "slug": "data-kandidat"
         },
         {
           "url": "/dashboard/pemilih",
