@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KandidatController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\WaktuController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -23,6 +24,7 @@ Route::get('/', function () {
 Route::middleware('auth')->group(function () {
     Route::prefix('dashboard')->middleware('role:admin')->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+        Route::get('pemilih', [UserController::class, 'index'])->name('pemilih.index');
         Route::get('kandidat', [KandidatController::class, 'index'])->name('kandidat.index');
         Route::get('kandidat/tambah', [KandidatController::class, 'create'])->name('kandidat.create');
         Route::post('kandidat/tambah', [KandidatController::class, 'store'])->name('kandidat.store');
