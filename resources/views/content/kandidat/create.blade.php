@@ -23,7 +23,7 @@
                     <label for="angkatan" class="form-label">Angkatan</label>
                     <input value="{{ old('angkatan') }}" name="angkatan" type="number"
                         class="form-control @error('angkatan') is-invalid @enderror" id="angkatan"
-                        placeholder="Masukkan NIM">
+                        placeholder="Masukkan Angkatan">
                     @error('angkatan')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

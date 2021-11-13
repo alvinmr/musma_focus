@@ -7,6 +7,13 @@
         <li><a class="dropdown-item" href="{{ route('kandidat.edit', $row->id) }}"> <span><i
                         data-feather="edit"></i></span>
                 Edit</a></li>
-        <li><a class="dropdown-item" href="#"><span><i data-feather="delete"></i></span> Hapus</a></li>
+        <form action="{{ route('kandidat.destroy', $row) }}" method="POST">
+            @csrf
+            <li>
+                <button type="submit" onclick="return confirm('apakah kamu yakin menghapus ini ?')"
+                    class="dropdown-item text-danger"><span><i data-feather="delete"></i></span>
+                    Hapus</button>
+            </li>
+        </form>
     </ul>
 </div>

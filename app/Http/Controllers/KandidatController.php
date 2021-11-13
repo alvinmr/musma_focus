@@ -29,7 +29,7 @@ class KandidatController extends Controller
     public function create()
     {
         $breadcrumbs = [
-            ['link' => "dashboard", 'name' => "Dashboard"], ['name' => "Master Data"], ['name' => "Data Kandidat"], ['name' => "Tambah Data"]
+            ['link' => "dashboard", 'name' => "Dashboard"], ['name' => "Master Data"], ['link' => 'dashboard/kandidat', 'name' => "Data Kandidat"], ['name' => "Tambah Data"]
         ];
         return view('content.kandidat.create', compact('breadcrumbs'));
     }
@@ -89,7 +89,10 @@ class KandidatController extends Controller
      */
     public function edit(Kandidat $kandidat)
     {
-        return view('content.kandidat.edit', compact('kandidat'));
+        $breadcrumbs = [
+            ['link' => "dashboard", 'name' => "Dashboard"], ['name' => "Master Data"], ['link' => 'dashboard/kandidat', 'name' => "Data Kandidat"], ['name' => "Edit Data"]
+        ];
+        return view('content.kandidat.edit', compact('kandidat', 'breadcrumbs'));
     }
 
     /**
@@ -101,15 +104,28 @@ class KandidatController extends Controller
      */
     public function update(Request $request, Kandidat $kandidat)
     {
+        $request->validate([
+            'nama' => ['required'],
+            'angkatan' => ['required'],
+            'nim' => ['required'],
+            'fakultas' => ['required'],
+            'prodi' => ['required'],
+            'deskripsi' => ['required'],
+            'visi' => ['required'],
+            'misi' => ['required'],
+        ]);
         // NOTE: Disimpen filenya ke folder public biar lebih gampang pas di hosting yang gabisa symlink
         if ($request->hasFile('foto')) {
+            $request->validate([
+                'foto' => 'required|image|max:2048'
+            ]);
             unlink($kandidat->foto);
             $fileName = $request->nama . '-' . time() . '.' . $request->file('foto')->extension();
             $request->file('foto')->move(public_path('kandidat'), $fileName);
             $kandidat->foto = 'kandidat/' . $fileName;
             $kandidat->save();
         }
-        // $kandidat->update($request->all());
+        $kandidat->update($request->except('foto'));
         return redirect()->route('kandidat.index');
     }
 
@@ -121,6 +137,7 @@ class KandidatController extends Controller
      */
     public function destroy(Kandidat $kandidat)
     {
+        unlink($kandidat->foto);
         $kandidat->delete();
         return redirect()->route('kandidat.index');
     }

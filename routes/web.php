@@ -27,6 +27,7 @@ Route::middleware('auth')->group(function () {
         Route::post('/kandidat/tambah', [KandidatController::class, 'store'])->name('kandidat.store');
         Route::get('/kandidat/edit/{kandidat}', [KandidatController::class, 'edit'])->name('kandidat.edit');
         Route::post('/kandidat/edit/{kandidat}', [KandidatController::class, 'update'])->name('kandidat.update');
+        Route::post('/kandidat/destroy/{kandidat}', [KandidatController::class, 'destroy'])->name('kandidat.destroy');
     });
 });
 Auth::routes([

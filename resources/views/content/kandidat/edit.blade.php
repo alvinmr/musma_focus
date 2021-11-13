@@ -1,6 +1,6 @@
 @extends('layouts/contentLayoutMaster')
 
-@section('title', 'Tambah Data Kandidat')
+@section('title', 'Edit Data Kandidat')
 
 @section('content')
     <!-- Kick start -->
@@ -22,7 +22,7 @@
                     <label for="angkatan" class="form-label">Angkatan</label>
                     <input value="{{ old('angkatan', $kandidat->angkatan) }}" name="angkatan" type="number"
                         class="form-control @error('angkatan') is-invalid @enderror" id="angkatan"
-                        placeholder="Masukkan NIM">
+                        placeholder="Masukkan Angkatan">
                     @error('angkatan')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
