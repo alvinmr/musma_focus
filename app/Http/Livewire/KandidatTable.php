@@ -34,7 +34,7 @@ class KandidatTable extends DataTableComponent
             Column::make('Aksi')
                 ->format(function ($value, $column, $row) {
                     // echo $row;
-                    return view('components.action-component', compact('row'));
+                    return view('components.action-kandidat', compact('row'));
                 }),
         ];
     }

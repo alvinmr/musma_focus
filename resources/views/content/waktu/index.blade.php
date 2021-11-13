@@ -1,15 +1,15 @@
 @extends('layouts/contentLayoutMaster')
 
-@section('title', 'Data Kandidat')
+@section('title', 'Setting Waktu')
 
 @section('content')
     <!-- Kick start -->
     <div class="card">
         <div class="card-header">
-            <a href="{{ route('kandidat.create') }}" class="btn btn-primary"><i data-feather="plus"></i> Tambah Data</a>
+            <a href="{{ route('waktu.create') }}" class="btn btn-primary"><i data-feather="plus"></i> Tambah Data</a>
         </div>
         <div class="card-body">
-            <livewire:kandidat-table>
+            <livewire:waktu-table>
         </div>
     </div>
     <!--/ Kick start -->

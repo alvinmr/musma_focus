@@ -26,13 +26,13 @@
       ]
     },
     {
-      "url": "/hasil-pemilihan",
+      "url": "/dashboard/hasil-pemilihan",
       "name": "Hasil Pemilihan",
       "icon": "bar-chart",
       "slug": "hasil-pemilihan"
     },
     {
-      "url": "/master/waktu",
+      "url": "/dashboard/waktu",
       "name": "Setting Waktu",
       "icon": "clock",
       "slug": "setting-waktu"
