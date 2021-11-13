@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KandidatController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\VotingController;
 use App\Http\Controllers\WaktuController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -37,6 +38,7 @@ Route::middleware('auth')->group(function () {
         Route::get('waktu/edit/{waktu}', [WaktuController::class, 'edit'])->name('waktu.edit');
         Route::post('waktu/edit/{waktu}', [WaktuController::class, 'update'])->name('waktu.update');
         Route::post('waktu/destroy/{waktu}', [WaktuController::class, 'destroy'])->name('waktu.destroy');
+        Route::get('hasil-pemilihan', [VotingController::class, 'index'])->name('waktu.index');
     });
 });
 Auth::routes([

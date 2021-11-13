@@ -4,62 +4,53 @@
 
 @section('content')
     <!-- Kick start -->
-    <div class="card">
-        <div class="card-header">
-            <h4 class="card-title">Kick start your next project 🚀</h4>
-        </div>
-        <div class="card-body">
-            <div class="card-text">
-                <p>
-                    Getting start with your project custom requirements using a ready template which is quite difficult and
-                    time
-                    taking process, Vuexy Admin provides useful features to kick start your project development with no
-                    efforts !
+    <div class="card card-congratulations">
+        <div class="text-center card-body">
+            <img src="{{ asset('images/elements/decore-left.png') }}" class="congratulations-img-left"
+                alt="card-img-left" />
+            <img src="{{ asset('images/elements/decore-right.png') }}" class="congratulations-img-right"
+                alt="card-img-right" />
+            <div class="shadow avatar avatar-xl bg-primary">
+                <div class="avatar-content">
+                    <i data-feather="award" class="font-large-1"></i>
+                </div>
+            </div>
+            <div class="text-center">
+                <h1 class="mb-1 text-white">Selamat datang bro {{ auth()->user()->name }}</h1>
+                <p class="m-auto card-text w-75">
+                    Here u should do today : <br>
+                    <strong>{{ $activity['activity'] }}</strong>
                 </p>
-                <ul>
-                    <li>
-                        Vuexy Admin provides you getting start pages with different layouts, use the layout as per your
-                        custom
-                        requirements and just change the branding, menu &amp; content.
-                    </li>
-                    <li>
-                        Every components in Vuexy Admin are decoupled, it means use use only components you actually need!
-                        Remove
-                        unnecessary and extra code easily just by excluding the path to specific SCSS, JS file.
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
     <!--/ Kick start -->
 
     <!-- Page layout -->
-    <div class="card">
-        <div class="card-header">
-            <h4 class="card-title">What is page layout?</h4>
-        </div>
-        <div class="card-body">
-            <div class="card-text">
-                <p>
-                    Starter kit includes pages with different layouts, useful for your next project to start development
-                    process
-                    from scratch with no time.
-                </p>
-                <ul>
-                    <li>Each layout includes required only assets only.</li>
-                    <li>
-                        Select your choice of layout from starter kit, customize it with optional changes like colors and
-                        branding,
-                        add required dependency only.
-                    </li>
-                </ul>
-                <div class="alert alert-primary" role="alert">
-                    <div class="alert-body">
-                        <strong>Info:</strong> Please check the &nbsp;<a class="text-primary"
-                            href="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/documentation/documentation-layouts.html#layout-collapsed-menu"
-                            target="_blank">Layout documentation</a>&nbsp; for more layout options i.e collapsed menu,
-                        without menu, empty & blank.
+    <div class="row">
+        <div class="col-lg-6 col-sm-6 col-12">
+            <div class="card">
+                <div class="card-header flex-column align-items-middle">
+                    <div class="m-0 avatar bg-light-warning p-50">
+                        <div class="avatar-content">
+                            <i data-feather="users" class="font-medium-5"></i>
+                        </div>
                     </div>
+                    <h2 class="mt-1 fw-bolder">100</h2>
+                    <p class="card-text">Pemilih</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-12">
+            <div class="card">
+                <div class="card-header flex-column align-items-middle">
+                    <div class="m-0 avatar bg-light-success p-50">
+                        <div class="avatar-content">
+                            <i data-feather="user" class="font-medium-5"></i>
+                        </div>
+                    </div>
+                    <h2 class="mt-1 fw-bolder">100</h2>
+                    <p class="card-text">Kandidat</p>
                 </div>
             </div>
         </div>
