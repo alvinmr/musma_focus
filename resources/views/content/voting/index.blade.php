@@ -27,10 +27,9 @@
         const myChart = new Chart(ctx, {
             type: 'pie',
             data: {
-                labels: ['Alvin', 'Maulana', 'Rhusuli'],
+                labels: ['{!! implode("', '", $nama_kandidat) !!}'],
                 datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3],
+                    data: [{!! implode(',', $total_pemilih) !!}],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',

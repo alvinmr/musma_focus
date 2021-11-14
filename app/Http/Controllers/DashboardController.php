@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kandidat;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
@@ -28,6 +30,8 @@ class DashboardController extends Controller
             ['link' => "dashboard", 'name' => "Dashboard"], ['name' => "Index"]
         ];
         $activity = Http::get('https://www.boredapi.com/api/activity/')->json();
-        return view('content.home', ['breadcrumbs' => $breadcrumbs, 'activity' => $activity]);
+        $pemilih = User::doesntHave('roles')->get()->count();
+        $kandidat = Kandidat::all()->count();
+        return view('content.home', ['breadcrumbs' => $breadcrumbs, 'activity' => $activity, 'pemilih' => $pemilih, 'kandidat' => $kandidat]);
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kandidat;
 use App\Models\Voting;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,13 @@ class VotingController extends Controller
         $breadcrumbs = [
             ['link' => "dashboard", 'name' => "Dashboard"], ['name' => "Hasil Pemilihan"]
         ];
-        return view('content.voting.index', compact('breadcrumbs'));
+        $nama_kandidat = Kandidat::pluck('nama')->toArray();
+        $id_kandidat = Kandidat::pluck('id');
+        $total_pemilih = [];
+        foreach ($id_kandidat as $id) {
+            array_push($total_pemilih, Voting::where('kandidat_id', $id)->count());
+        }
+        return view('content.voting.index', compact('breadcrumbs', 'nama_kandidat', 'total_pemilih'));
     }
 
     /**

@@ -36,7 +36,7 @@
                             <i data-feather="users" class="font-medium-5"></i>
                         </div>
                     </div>
-                    <h2 class="mt-1 fw-bolder">100</h2>
+                    <h2 class="mt-1 fw-bolder">{{ $pemilih }}</h2>
                     <p class="card-text">Pemilih</p>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                             <i data-feather="user" class="font-medium-5"></i>
                         </div>
                     </div>
-                    <h2 class="mt-1 fw-bolder">100</h2>
+                    <h2 class="mt-1 fw-bolder">{{ $kandidat }}</h2>
                     <p class="card-text">Kandidat</p>
                 </div>
             </div>

@@ -23,6 +23,6 @@ class UserTable extends DataTableComponent
 
     public function query(): Builder
     {
-        return User::query();
+        return User::query()->doesntHave('roles');
     }
 }
