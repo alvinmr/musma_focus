@@ -22,7 +22,7 @@
     <title>@yield('title') - Musma Focus</title>
     <link rel="apple-touch-icon" href="{{ asset('images/ico/apple-icon-120.png') }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo/favicon.ico') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
 
     {{-- Include core + vendor Styles --}}
@@ -30,6 +30,12 @@
 
     {{-- Include core + vendor Styles --}}
     @include('panels/styles')
+
+    {{-- Data AOS --}}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    {{-- Bootsrap Icon --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 
 
@@ -67,6 +73,13 @@
                 });
             }
         })
+    </script>
+
+    {{-- Data AOS --}}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
     </script>
 
 </body>
