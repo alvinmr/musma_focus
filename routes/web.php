@@ -19,9 +19,8 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return "ini landing page kalo mau";
-})->name('home');
+Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('home');
+
 Route::middleware('auth')->group(function () {
     Route::prefix('dashboard')->middleware('role:admin')->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
@@ -41,6 +40,7 @@ Route::middleware('auth')->group(function () {
         Route::get('hasil-pemilihan', [VotingController::class, 'index'])->name('waktu.index');
     });
 });
+
 Auth::routes([
     'register' => false, // Registration Routes...
     'reset' => false, // Password Reset Routes...
