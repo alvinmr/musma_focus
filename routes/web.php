@@ -1,12 +1,8 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\KandidatController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\VotingController;
-use App\Http\Controllers\WaktuController;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{MainController, UserController, WaktuController, VotingController, KandidatController, DashboardController};
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +15,9 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('home');
+Route::get('/', [MainController::class, 'index'])->name('home');
+Route::get('/voting', [MainController::class, 'voting'])->name('voting');
+Route::post('/voting/{kandidat}', [KandidatController::class, 'voting'])->name('voting.store');
 
 Route::middleware('auth')->group(function () {
     Route::prefix('dashboard')->middleware('role:admin')->group(function () {

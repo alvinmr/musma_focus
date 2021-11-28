@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kandidat;
+use App\Models\Voting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -140,5 +141,14 @@ class KandidatController extends Controller
         unlink($kandidat->foto);
         $kandidat->delete();
         return redirect()->route('kandidat.index');
+    }
+
+    public function vote(Kandidat $kandidat)
+    {
+        Voting::create([
+            'user_id' => auth()->user()->id,
+            'kandidat_id' => $kandidat->id
+        ]);
+        return redirect()->back();
     }
 }
