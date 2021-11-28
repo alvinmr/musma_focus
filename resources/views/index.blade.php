@@ -7,12 +7,6 @@ $configData = Helper::applClasses();
     
 @section('content')
 
-{{-- <section id="banner">
-    <div class="container-fluid">
-        
-    </div>
-</section> --}}
-
 <!-- ======= Header ======= -->
 <header id="navbar" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
@@ -36,126 +30,128 @@ $configData = Helper::applClasses();
 </header><!-- End Header -->
 
 <section id="header" class="hero d-flex align-items-center">
-    <div class="container">
-        <div class="row">
-          <div class="col-lg-6 d-flex flex-column justify-content-center">
-            <h1 data-aos="fade-up">Selamat Datang Teman Teman di MUSMA FOCUS</h1>
-            <h2 data-aos="fade-up" data-aos-delay="400">"Stay Focus, Stay On Top"</h2>
-            <div data-aos="fade-up" data-aos-delay="600">
-              <div class="text-center text-lg-start">
-                <a href="#polling" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                  <span>Mulai Polling</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
+  
+  <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">Selamat Datang Teman Teman di MUSMA FOCUS</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">"Stay Focus, Stay On Top"</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="#polling" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Mulai Polling</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
             </div>
           </div>
-          <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="{{ asset('images/banner/upgrade.png') }}" class="img-fluid" alt="">
-          </div>
         </div>
-    </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{{ asset('images/banner/upgrade.png') }}" class="img-fluid" alt="">
+        </div>
+      </div>
+  </div>
+
 </section>
 
 <main id="main">
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
 
-      <div class="container" data-aos="fade-up">
-        <div class="row gx-0">
+    <div class="container" data-aos="fade-up">
+      <div class="row gx-0">
 
-          <div class="col-lg-12 d-flex flex-column justify-content-center text-center" data-aos="fade-up" data-aos-delay="200">
-            <div class="content">
-              <h1>Apa Itu Musma Focus?</h1>
-              <h2>Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti reprehenderit.</h2>
-              <p>
-                Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.
-              </p>
-            </div>
+        <div class="col-lg-12 d-flex flex-column justify-content-center text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="content">
+            <h1>Apa Itu Musma Focus?</h1>
+            <h2>Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti reprehenderit.</h2>
+            <p>
+              Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.
+            </p>
           </div>
-
         </div>
+
       </div>
+    </div>
 
-    </section><!-- End About Section -->
+  </section><!-- End About Section -->
 
 
-    <!-- ======= polling Section ======= -->
-    <section id="polling" class="pricing">
+  <!-- ======= polling Section ======= -->
+  <section id="polling" class="pricing">
 
-      <div class="container" data-aos="fade-up">
+    <div class="container" data-aos="fade-up">
 
-        <header class="section-header">
-          <h2>MUSMA FOCUS 2021</h2>
-          <p>CALON KANDIDAT</p>
-        </header>
+      <header class="section-header">
+        <h2>MUSMA FOCUS 2021</h2>
+        <p>CALON KANDIDAT</p>
+      </header>
 
-        <div class="row gy-4" data-aos="fade-left">
+      <div class="row gy-4" data-aos="fade-left">
 
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-            <div class="box">
-              <h1 style="color: #07d5c0;">Dicky Umardhani</h1>
-              <img src="{{ asset('images/avatars/3.png') }}" class="img-fluid" alt="">
-              <button href="#" class="btn-buy" data-bs-toggle="modal" data-bs-target="#modalVisiMisi">Lihat Visi & Misi</button>
-            </div>
+        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="box">
+            <h1 style="color: #07d5c0;">Dicky Umardhani</h1>
+            <img src="{{ asset('images/avatars/3.png') }}" class="img-fluid" alt="">
+            <button href="#" class="btn-buy" data-bs-toggle="modal" data-bs-target="#modalVisiMisi">Lihat Visi & Misi</button>
           </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="box">
-              <h1 style="color: #65c600;">Dimas Aldi</h1>
-              <img src="{{ asset('images/avatars/3.png') }}" class="img-fluid" alt="">
-              <button href="#" class="btn-buy" data-bs-toggle="modal" data-bs-target="#modalVisiMisi">Lihat Visi & Misi</button>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-            <div class="box">
-              <h1 style="color: #ff901c;">Rizky Chandra</h1>
-              <img src="{{ asset('images/avatars/3.png') }}" class="img-fluid" alt="">
-              <button href="#" class="btn-buy" data-bs-toggle="modal" data-bs-target="#modalVisiMisi">Lihat Visi & Misi</button>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-            <div class="box">
-              <h1 style="color: #ff0071;">Desak Mulya</h1>
-              <img src="{{ asset('images/avatars/3.png') }}" class="img-fluid" alt="">
-              <button href="#" class="btn-buy" data-bs-toggle="modal" data-bs-target="#modalVisiMisi">Lihat Visi & Misi</button>
-            </div>
-          </div>
-
-          <div class="text-center text-lg-start d-grid gap-2 col-lg-3 mx-auto">
-            <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-              <span>Mulai Polling</span>
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-
         </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="box">
+            <h1 style="color: #65c600;">Dimas Aldi</h1>
+            <img src="{{ asset('images/avatars/3.png') }}" class="img-fluid" alt="">
+            <button href="#" class="btn-buy" data-bs-toggle="modal" data-bs-target="#modalVisiMisi">Lihat Visi & Misi</button>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+          <div class="box">
+            <h1 style="color: #ff901c;">Rizky Chandra</h1>
+            <img src="{{ asset('images/avatars/3.png') }}" class="img-fluid" alt="">
+            <button href="#" class="btn-buy" data-bs-toggle="modal" data-bs-target="#modalVisiMisi">Lihat Visi & Misi</button>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+          <div class="box">
+            <h1 style="color: #ff0071;">Desak Mulya</h1>
+            <img src="{{ asset('images/avatars/3.png') }}" class="img-fluid" alt="">
+            <button href="#" class="btn-buy" data-bs-toggle="modal" data-bs-target="#modalVisiMisi">Lihat Visi & Misi</button>
+          </div>
+        </div>
+
+        <div class="text-center text-lg-start d-grid gap-2 col-lg-3 mx-auto">
+          <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+            <span>Mulai Polling</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
       </div>
+    </div>
 
-    </section><!-- End Pricing Section -->
+  </section><!-- End Pricing Section -->
 
-</main><!-- End #main -->
-
-
-{{-- Modal Visi dan Misi --}}
-<div class="modal fade" id="modalVisiMisi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Visi & Misi</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        asdasdasdasd
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+  {{-- Modal Visi dan Misi --}}
+  <div class="modal fade" id="modalVisiMisi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Visi & Misi</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          asdasdasdasd
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+
+</main><!-- End #main -->
+
 
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">

@@ -25,6 +25,7 @@ $configData = Helper::applClasses();
     <div class="shadow-bottom"></div>
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            @role('admin')
             {{-- Foreach menu item starts --}}
             @if (isset($menuData[0]))
                 @foreach ($menuData[0]->menu as $menu)
@@ -62,6 +63,11 @@ $configData = Helper::applClasses();
                 @endforeach
             @endif
             {{-- Foreach menu item ends --}}
+            @else
+            <li class="nav-item"><a class="nav-link d-flex align-items-center" href="index.html" ><i data-feather="home"></i><span>Dashboards</span></a></li>
+            <li class="nav-item"><a class="nav-link d-flex align-items-center" href="index.html" ><i data-feather="user-check"></i><span>Voting</span></a></li>
+            @endrole
+
         </ul>
     </div>
 </div>
