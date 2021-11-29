@@ -64,10 +64,10 @@ $configData = Helper::applClasses();
                 @endif
                 {{-- Foreach menu item ends --}}
             @else
-                <li class="nav-item"><a class="nav-link d-flex align-items-center" href="{{ route('home') }}"><i
-                            data-feather="home"></i><span>Dashboards</span></a></li>
-                <li class="nav-item"><a class="nav-link d-flex align-items-center" href="{{ route('voting') }}"><i
-                            data-feather="user-check"></i><span>Voting</span></a></li>
+                <li class="nav-item"><a class="nav-link d-flex align-items-center @if (Request::is('/')) active @endif"
+                        href="{{ route('home') }}"><i data-feather="home"></i><span>Dashboards</span></a></li>
+                <li class="nav-item"><a class="nav-link d-flex align-items-center @if (Request::is('voting')) active @endif"
+                        href="{{ route('voting') }}"><i data-feather="user-check"></i><span>Voting</span></a></li>
             @endrole
 
         </ul>
