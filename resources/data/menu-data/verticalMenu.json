@@ -10,18 +10,19 @@
       "name": "Master Data",
       "icon": "database",
       "slug": "",
+      "url": "",
       "submenu": [
         {
           "url": "/dashboard/kandidat",
           "name": "Data Kandidat",
           "icon": "user",
-          "slug": "data-kandidat"
+          "slug": "kandidat.index"
         },
         {
           "url": "/dashboard/pemilih",
           "name": "Data Pemilih",
           "icon": "users",
-          "slug": "data-pemilih"
+          "slug": "pemilih.index"
         }
       ]
     },
@@ -35,7 +36,7 @@
       "url": "/dashboard/waktu",
       "name": "Setting Waktu",
       "icon": "clock",
-      "slug": "setting-waktu"
+      "slug": "waktu.index"
     }
   ]
 }
