@@ -79,9 +79,15 @@
                             John Doe
                         @endif
                     </span>
-                    <span class="user-status">
-                        Admin
-                    </span>
+                    @role('admin')
+                        <span class="user-status">
+                            Admin
+                        </span>
+                    @else
+                        <span class="user-status">
+                            Peserta
+                        </span>
+                    @endrole
                 </div>
                 <span class="avatar">
                     <img class="round" src="https://source.boringavatars.com/beam/120/" alt="avatar"

@@ -26,46 +26,48 @@ $configData = Helper::applClasses();
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
             @role('admin')
-            {{-- Foreach menu item starts --}}
-            @if (isset($menuData[0]))
-                @foreach ($menuData[0]->menu as $menu)
-                    @if (isset($menu->navheader))
-                        <li class="navigation-header">
-                            <span>{{ $menu->navheader }}</span>
-                            <i data-feather="more-horizontal"></i>
-                        </li>
-                    @else
-                        {{-- Add Custom Class with nav-item --}}
-                        @php
-                            $custom_classes = '';
-                            if (isset($menu->classlist)) {
-                                $custom_classes = $menu->classlist;
-                            }
-                        @endphp
-                        <li
-                            class="nav-item {{ $custom_classes }} {{ Route::currentRouteName() === $menu->slug ? 'active' : '' }}">
-                            <a href="{{ isset($menu->url) ? url($menu->url) : 'javascript:void(0)' }}"
-                                class="d-flex align-items-center"
-                                target="{{ isset($menu->newTab) ? '_blank' : '_self' }}">
-                                <i data-feather="{{ $menu->icon }}"></i>
-                                <span class="menu-title text-truncate">{{ $menu->name }}</span>
-                                @if (isset($menu->badge))
-                                    <?php $badgeClasses = 'badge rounded-pill badge-light-primary ms-auto me-1'; ?>
-                                    <span
-                                        class="{{ isset($menu->badgeClass) ? $menu->badgeClass : $badgeClasses }}">{{ $menu->badge }}</span>
+                {{-- Foreach menu item starts --}}
+                @if (isset($menuData[0]))
+                    @foreach ($menuData[0]->menu as $menu)
+                        @if (isset($menu->navheader))
+                            <li class="navigation-header">
+                                <span>{{ $menu->navheader }}</span>
+                                <i data-feather="more-horizontal"></i>
+                            </li>
+                        @else
+                            {{-- Add Custom Class with nav-item --}}
+                            @php
+                                $custom_classes = '';
+                                if (isset($menu->classlist)) {
+                                    $custom_classes = $menu->classlist;
+                                }
+                            @endphp
+                            <li
+                                class="nav-item {{ $custom_classes }} {{ Route::currentRouteName() === $menu->slug ? 'active' : '' }}">
+                                <a href="{{ isset($menu->url) ? url($menu->url) : 'javascript:void(0)' }}"
+                                    class="d-flex align-items-center"
+                                    target="{{ isset($menu->newTab) ? '_blank' : '_self' }}">
+                                    <i data-feather="{{ $menu->icon }}"></i>
+                                    <span class="menu-title text-truncate">{{ $menu->name }}</span>
+                                    @if (isset($menu->badge))
+                                        <?php $badgeClasses = 'badge rounded-pill badge-light-primary ms-auto me-1'; ?>
+                                        <span
+                                            class="{{ isset($menu->badgeClass) ? $menu->badgeClass : $badgeClasses }}">{{ $menu->badge }}</span>
+                                    @endif
+                                </a>
+                                @if (isset($menu->submenu))
+                                    @include('panels/submenu', ['menu' => $menu->submenu])
                                 @endif
-                            </a>
-                            @if (isset($menu->submenu))
-                                @include('panels/submenu', ['menu' => $menu->submenu])
-                            @endif
-                        </li>
-                    @endif
-                @endforeach
-            @endif
-            {{-- Foreach menu item ends --}}
+                            </li>
+                        @endif
+                    @endforeach
+                @endif
+                {{-- Foreach menu item ends --}}
             @else
-            <li class="nav-item"><a class="nav-link d-flex align-items-center" href="index.html" ><i data-feather="home"></i><span>Dashboards</span></a></li>
-            <li class="nav-item"><a class="nav-link d-flex align-items-center" href="index.html" ><i data-feather="user-check"></i><span>Voting</span></a></li>
+                <li class="nav-item"><a class="nav-link d-flex align-items-center" href="{{ route('home') }}"><i
+                            data-feather="home"></i><span>Dashboards</span></a></li>
+                <li class="nav-item"><a class="nav-link d-flex align-items-center" href="{{ route('voting') }}"><i
+                            data-feather="user-check"></i><span>Voting</span></a></li>
             @endrole
 
         </ul>

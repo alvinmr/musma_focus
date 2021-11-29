@@ -16,11 +16,11 @@
                 </div>
             </div>
             <div class="text-center">
-                {{-- <h1 class="mb-1 text-white">Selamat datang bro {{ auth()->user()->name }}</h1> --}}
-                {{-- <p class="m-auto card-text w-75">
+                <h1 class="mb-1 text-white">Selamat datang bro {{ auth()->user()->name }}</h1>
+                <p class="m-auto card-text w-75">
                     Here u should do today : <br>
                     <strong>{{ $activity['activity'] }}</strong>
-                </p> --}}
+                </p>
             </div>
         </div>
     </div>
@@ -36,7 +36,7 @@
                             <i data-feather="users" class="font-medium-5"></i>
                         </div>
                     </div>
-                    {{-- <h2 class="mt-1 fw-bolder">{{ $pemilih }}</h2> --}}
+                    <h2 class="mt-1 fw-bolder">10</h2>
                     <p class="card-text">Pemilih</p>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                             <i data-feather="user" class="font-medium-5"></i>
                         </div>
                     </div>
-                    {{-- <h2 class="mt-1 fw-bolder">{{ $kandidat }}</h2> --}}
+                    <h2 class="mt-1 fw-bolder">10</h2>
                     <p class="card-text">Kandidat</p>
                 </div>
             </div>

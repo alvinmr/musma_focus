@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{MainController, UserController, WaktuController, VotingController, KandidatController, DashboardController};
+use App\Models\Waktu;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,13 @@ use App\Http\Controllers\{MainController, UserController, WaktuController, Votin
 |
 */
 
-Route::get('/', [MainController::class, 'index'])->name('home');
+Route::get('/', [MainController::class, 'index'])->name('home')->middleware('auth');
+Route::get('/soon', function () {
+    $waktu = Waktu::first();
+    return view('content.peserta.countdown', compact('waktu'));
+});
 Route::get('/voting', [MainController::class, 'voting'])->name('voting');
-Route::post('/voting/{kandidat}', [KandidatController::class, 'voting'])->name('voting.store');
+Route::post('/voting/{kandidat}', [KandidatController::class, 'vote'])->name('voting.store');
 
 Route::middleware('auth')->group(function () {
     Route::prefix('dashboard')->middleware('role:admin')->group(function () {
