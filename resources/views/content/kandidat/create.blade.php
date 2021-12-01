@@ -64,7 +64,7 @@
                         @enderror
                     </div>
                 </div>
-                <div class="mb-2">
+                {{-- <div class="mb-2">
                     <label for="deskripsi" class="form-label">Deskripsi</label>
                     <textarea name="deskripsi" class="form-control char-textarea @error('deskripsi') is-invalid @enderror"
                         cols="30" rows="4"
@@ -74,7 +74,7 @@
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
-                </div>
+                </div> --}}
                 <div class="mb-2 row">
                     <div class="col-6">
                         <label for="visi" class="form-label">Visi</label>

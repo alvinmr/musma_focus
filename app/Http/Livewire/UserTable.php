@@ -16,8 +16,7 @@ class UserTable extends DataTableComponent
             Column::make('NIM', 'nim'),
             Column::make('Nama Lengkap', 'name'),
             Column::make('Fakultas', 'fakultas'),
-            Column::make('Program Studi', 'prodi'),
-            Column::make('Email', 'email'),
+            Column::make('Program Studi', 'prodi')
         ];
     }
 

@@ -23,7 +23,7 @@ class MainController extends Controller
     public function index()
     {
         $breadcrumbs = [
-            ['link' => "dashboard", 'name' => "Dashboard"], ['name' => "Index"]
+            ['name' => "Dashboard"]
         ];
         $activity = Http::get('https://www.boredapi.com/api/activity/')->json();
         $waktu = Waktu::first();
@@ -39,7 +39,7 @@ class MainController extends Controller
     public function voting()
     {
         $breadcrumbs = [
-            ['link' => "dashboard", 'name' => "Dashboard"], ['name' => "Voting"]
+            ['link' => "/", 'name' => "Dashboard"], ['name' => "Voting"]
         ];
         $kandidat = Kandidat::all();
         return view('content.peserta.voting', compact('breadcrumbs', 'kandidat'));

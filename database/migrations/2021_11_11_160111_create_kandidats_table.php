@@ -20,7 +20,7 @@ class CreateKandidatsTable extends Migration
             $table->string('nim');
             $table->string('fakultas');
             $table->string('prodi');
-            $table->string('deskripsi');
+            // $table->string('deskripsi');
             $table->string('visi');
             $table->string('misi');
             $table->string('foto');

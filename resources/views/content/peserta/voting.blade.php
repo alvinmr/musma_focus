@@ -56,7 +56,7 @@
                                                     icon: 'success',
                                                     confirmButtonText: 'Ya, yakin'
                                                 }).then((result) => {
-                                                    window.location.href = {{ route('home') }};
+                                                    window.location.href = "{{ route('home') }}";
                                                 })
                                             }
                                         })
