@@ -4,11 +4,11 @@ $configData = Helper::applClasses();
 <div class="main-menu menu-fixed {{ $configData['theme'] === 'dark' || $configData['theme'] === 'semi-dark' ? 'menu-dark' : 'menu-light' }} menu-accordion menu-shadow"
     data-scroll-to-active="true">
     <div class="navbar-header">
-        <ul class="nav navbar-nav flex-row">
+        <ul class="flex-row nav navbar-nav">
             <li class="nav-item me-auto">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <span class="brand-logo">
-
+                        <img src="{{ asset('images/logo/musma.png') }}" class="img-fluid">
                     </span>
                     <h2 class="brand-text">Musma Focus</h2>
                 </a>

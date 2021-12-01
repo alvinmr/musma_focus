@@ -15,9 +15,10 @@ $configData = Helper::applClasses();
     <div class="auth-wrapper auth-cover">
         <div class="m-0 auth-inner row">
             <!-- Brand logo-->
-            <a class="brand-logo" href="#">
 
-                <h2 class="brand-text text-primary ms-1">Musma Focus</h2>
+            <a class="brand-logo align-items-center" href="#">
+                <img src="{{ asset('images/logo/musma.png') }}" width="5%">
+                {{-- <h2 class="brand-text text-primary ms-1">Musma Focus</h2> --}}
             </a>
             <!-- /Brand logo-->
 
