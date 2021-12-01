@@ -41,11 +41,11 @@ $configData = Helper::applClasses();
                     <form class="mt-2 auth-login-form" action="{{ route('login') }}" method="POST">
                         @csrf
                         <div class="mb-1">
-                            <label class="form-label" for="email">Email</label>
-                            <input class="form-control @error('email') is-invalid @enderror" id="email" type="text"
-                                name="email" placeholder="john@example.com" aria-describedby="email" autofocus=""
-                                tabindex="1" value="{{ old('email') }}" />
-                            @error('email')
+                            <label class="form-label" for="email">NIM</label>
+                            <input class="form-control @error('nim') is-invalid @enderror" id="nim" type="text" name="nim"
+                                placeholder="Masukkan NIM kamu" aria-describedby="nim" autofocus="" tabindex="1"
+                                value="{{ old('nim') }}" />
+                            @error('nim')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

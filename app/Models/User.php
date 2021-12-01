@@ -24,7 +24,6 @@ class User extends Authenticatable
         'nim',
         'prodi',
         'fakultas',
-        'email',
         'password',
     ];
 
