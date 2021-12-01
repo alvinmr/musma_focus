@@ -1,11 +1,11 @@
 @extends('layouts/fullLayoutMaster')
 
-@section('title', 'Home')
+@section('title', 'Coming Soon')
 
 @section('content')
 
-    <div class="card card-congratulations">
-        <div class="mt-5 text-center card-body">
+    <div class="card-congratulations" style="height: 100vh;">
+        <div class="text-center card-body">
             <img src="{{ asset('images/elements/decore-left.png') }}" class="congratulations-img-left"
                 alt="card-img-left" />
             <img src="{{ asset('images/elements/decore-right.png') }}" class="congratulations-img-right"
@@ -20,17 +20,21 @@
                 <h3 class="mb-2 text-white">Pemilihan Calon Ketua UKM Udayana Focus 2022</h3>
                 <h3 class="mb-2 text-white">AKAN DIMULAI : </h3>
                 <div id="demo" class="text-black countdown d-flex justify-content-center">
-                    <div class="p-1">
-                        <h3>%d Hari </h3>
+                    <div>
+                        <h3>%d </h3>
+                        <h4>Hari</h4>
                     </div>
-                    <div class="p-1">
-                        <h3>%h Jam </h3>
+                    <div>
+                        <h3>%h </h3>
+                        <h4>Jam</h4>
                     </div>
-                    <div class="p-1">
-                        <h3>%m Menit </h3>
+                    <div>
+                        <h3>%m </h3>
+                        <h4>Menit</h4>
                     </div>
-                    <div class="p-1">
-                        <h3>%s Detik </h3>
+                    <div>
+                        <h3>%s </h3>
+                        <h4>Detik</h4>
                     </div>
                 </div>
             </div>
