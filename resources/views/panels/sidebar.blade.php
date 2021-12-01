@@ -8,7 +8,7 @@ $configData = Helper::applClasses();
             <li class="nav-item me-auto">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <span class="brand-logo">
-                        <img src="{{ asset('images/logo/musma.png') }}" class="img-fluid">
+                        <img src="{{ asset('musma.png') }}" class="img-fluid">
                     </span>
                     <h2 class="brand-text">Musma Focus</h2>
                 </a>

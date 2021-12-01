@@ -17,7 +17,7 @@ $configData = Helper::applClasses();
             <!-- Brand logo-->
 
             <a class="brand-logo align-items-center" href="#">
-                <img src="{{ asset('images/logo/musma.png') }}" width="5%">
+                <img src="{{ asset('musma.png') }}" width="5%">
                 {{-- <h2 class="brand-text text-primary ms-1">Musma Focus</h2> --}}
             </a>
             <!-- /Brand logo-->
