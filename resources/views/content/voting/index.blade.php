@@ -8,9 +8,6 @@
     <div class="justify-content-center row">
         <div class="col-lg-6 col-md-12 col-sm-12">
             <div class="card">
-                <div class="card-header">
-                    <p>Bingung diisi apa</p>
-                </div>
                 <div class="card-body">
                     <canvas id="myChart" class="chartjs" data-height="200"></canvas>
                 </div>
