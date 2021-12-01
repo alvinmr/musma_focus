@@ -13,8 +13,11 @@ class UserTable extends DataTableComponent
     public function columns(): array
     {
         return [
-            Column::make('NIM', 'nim'),
-            Column::make('Nama Lengkap', 'name'),
+            Column::make('NIM', 'nim')
+                ->searchable()
+                ->sortable(),
+            Column::make('Nama Lengkap', 'name')
+                ->searchable(),
             Column::make('Fakultas', 'fakultas'),
             Column::make('Program Studi', 'prodi')
         ];
