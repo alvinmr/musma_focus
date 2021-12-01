@@ -4,14 +4,14 @@
 
 @section('content')
     @if (auth()->user()->votings->count() > 0)
-        <h2 class="text-center mb-2 font-weight-bold">Terimakasih kamu sudah memilih kandidat</h2>
+        <h2 class="mb-2 text-center font-weight-bold">Terimakasih, kamu sudah memilih kandidat</h2>
     @else
-        <div class="row row-cols-1 row-cols-md-3 mb-2 justify-content-center">
+        <div class="mb-2 row row-cols-1 row-cols-md-3 justify-content-center">
             @forelse ($kandidat as $kandidat_item)
                 <div class="col">
                     <div class="card h-100">
-                        <img class="card-img-top" src="{{ asset('images/avatars/10.png') }}" alt="Card image cap" />
-                        <div class="card-body text-center">
+                        <img class="card-img-top" src="{{ asset($kandidat_item->foto) }}" alt="Card image cap" />
+                        <div class="text-center card-body">
                             <h4 class="card-title">{{ $kandidat_item->nama }}</h4>
                             <div>
                                 <h5>Visi</h5>
@@ -56,7 +56,7 @@
                                                     icon: 'success',
                                                     confirmButtonText: 'Ya, yakin'
                                                 }).then((result) => {
-                                                    location.reload();
+                                                    window.location.href = {{ route('home') }};
                                                 })
                                             }
                                         })
