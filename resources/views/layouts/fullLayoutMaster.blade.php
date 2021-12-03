@@ -15,10 +15,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description"
-        content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-    <meta name="keywords"
-        content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="PIXINVENT">
+        content="Musyawarah Mahasiswa Udayana Focus merupakan kegiatan tahunan yang diselenggarakan oleh Unit Kegiatan Mahasiswa Udayana Focus Universitas Udayana dengan tujuan memilih dan membentuk kepengurusan UKM Udayana Focus untuk mencapai kemajuan organisasi. Kegiatan ini merupakan wadah pengambilan keputusan dalam suatu badan organisasi, di mana diharapkan anggota UKM Udayana Focus dapat menyalurkan aspirasinya melalui kegiatan ini.
+        Adapun agenda yang">
+    <meta name="author" content="MUSMA">
     <title>@yield('title') - Musma Focus</title>
     <link rel="apple-touch-icon" href="{{ asset('musma.png') }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('musma.png') }}">
