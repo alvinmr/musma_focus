@@ -27,7 +27,7 @@
     <!--/ Kick start -->
 
     <div class="justify-content-center row">
-        <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="card">
                 <div class="card-header">
                     <p>Hasil Pemilihan</p>
@@ -45,10 +45,11 @@
     <script>
         const ctx = document.getElementById('myChart').getContext('2d');
         const myChart = new Chart(ctx, {
-            type: 'pie',
+            type: 'bar',
             data: {
                 labels: ['{!! implode("', '", $nama_kandidat) !!}'],
                 datasets: [{
+                    label: "Hasil Pemilihan",
                     data: [{!! implode(',', $total_pemilih) !!}],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
