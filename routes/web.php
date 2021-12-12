@@ -16,7 +16,10 @@ use App\Models\Waktu;
 |
 */
 
-Route::get('/', [MainController::class, 'index'])->name('home')->middleware('auth');
+Route::get('/', function () {
+    return redirect('/soon');
+})->name('home')->middleware('auth');
+
 Route::get('/soon', function () {
     $waktu = Waktu::first();
     return view('content.peserta.countdown', compact('waktu'));
