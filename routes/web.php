@@ -16,9 +16,7 @@ use App\Models\Waktu;
 |
 */
 
-Route::get('/', function () {
-    return redirect('/soon');
-})->name('home');
+Route::get('/', [MainController::class, 'index'])->name('home')->middleware('auth');
 
 Route::get('/soon', function () {
     $waktu = Waktu::first();
