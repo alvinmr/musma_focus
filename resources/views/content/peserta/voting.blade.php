@@ -32,10 +32,10 @@
                                 @csrf
                                 <button type="submit" class="btn btn-primary">Vote</a>
                             </form> --}}
-                                <button class="btn btn-primary btn-vote{{ $kandidat->id }}">Vote</button>
+                                <button class="btn btn-primary btn-vote{{ $kandidat_item->id }}">Vote</button>
 
                                 <script>
-                                    $('.btn-vote{{ $kandidat->id }}').on('click', function() {
+                                    $('.btn-vote{{ $kandidat_item->id }}').on('click', function() {
                                         Swal.fire({
                                             title: 'Apakah kamu yakin memilih kandidat ini?',
                                             text: "Jika kamu menekan yakin, maka kamu tidak bisa mengembalikan aksi ini",
