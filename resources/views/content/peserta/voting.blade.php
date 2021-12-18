@@ -54,7 +54,7 @@
                                                     title: 'Terpilih!',
                                                     text: '.',
                                                     icon: 'success',
-                                                    confirmButtonText: 'Ya, yakin'
+                                                    confirmButtonText: 'Okay'
                                                 }).then((result) => {
                                                     window.location.href = "{{ route('home') }}";
                                                 })
