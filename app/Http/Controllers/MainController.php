@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\UsersExport;
 use App\Models\Kandidat;
 use App\Models\Voting;
 use App\Models\Waktu;
@@ -20,6 +21,7 @@ class MainController extends Controller
             return redirect('/soon');
         });
     }
+
     public function index()
     {
         $breadcrumbs = [

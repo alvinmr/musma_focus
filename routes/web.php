@@ -1,5 +1,6 @@
 <?php
 
+use App\Exports\UsersExport;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{MainController, UserController, WaktuController, VotingController, KandidatController, DashboardController};
@@ -19,6 +20,10 @@ use App\Models\Waktu;
 Route::get('/', [MainController::class, 'index'])->name('home')->middleware('auth');
 
 Route::get('/pemenang', [MainController::class, 'pemenang'])->name('pemenang');
+
+Route::get('/data-pemilih', function () {
+    return Excel::download(new UsersExport, 'data_pemilih.xlsx');
+});
 
 Route::get('/soon', function () {
     $waktu = Waktu::first();
