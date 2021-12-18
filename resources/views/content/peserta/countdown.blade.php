@@ -16,9 +16,9 @@
                 </div>
             </div>
             <div class="text-center">
-                <h1 class="mt-2 mb-2 text-white" style="font-size: 50px; font-weight: bold;">COMING SOON</h1>
+                <h1 class="mt-2 mb-2 text-white" style="font-size: 50px; font-weight: bold;">TELAH SELESAI</h1>
                 <h3 class="mb-2 text-white">Pemilihan Calon Ketua UKM Udayana Focus 2022</h3>
-                <h3 class="mb-2 text-white">AKAN DIMULAI : </h3>
+                <h3 class="mb-2 text-white">TELAH SELESAI </h3>
                 <div id="demo" class="text-black countdown d-flex justify-content-center">
                     <div>
                         <h3>%d </h3>
