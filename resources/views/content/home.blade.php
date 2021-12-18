@@ -28,7 +28,7 @@
 
     <!-- Page layout -->
     <div class="row">
-        <div class="col-lg-6 col-sm-6 col-12">
+        <div class="col-lg-4 col-sm-4 col-12">
             <div class="card">
                 <div class="card-header flex-column align-items-middle">
                     <div class="m-0 avatar bg-light-warning p-50">
@@ -41,7 +41,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 col-sm-6 col-12">
+        <div class="col-lg-4 col-sm-4 col-12">
             <div class="card">
                 <div class="card-header flex-column align-items-middle">
                     <div class="m-0 avatar bg-light-success p-50">
@@ -51,6 +51,19 @@
                     </div>
                     <h2 class="mt-1 fw-bolder">{{ $kandidat }}</h2>
                     <p class="card-text">Kandidat</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-4 col-12">
+            <div class="card">
+                <div class="card-header flex-column align-items-middle">
+                    <div class="m-0 avatar bg-light-success p-50">
+                        <div class="avatar-content">
+                            <i data-feather="user" class="font-medium-5"></i>
+                        </div>
+                    </div>
+                    <h2 class="mt-1 fw-bolder">{{ $suara_masuk }} dari {{ $pemilih }}</h2>
+                    <p class="card-text">Suara Masuk</p>
                 </div>
             </div>
         </div>
