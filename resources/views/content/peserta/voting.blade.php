@@ -35,7 +35,7 @@
                                 <button class="btn btn-primary " id="btn-vote{{ $kandidat_item->id }}">Vote</button>
 
                                 <script>
-                                    document.getElementById('btn-vote{{ $kandidat_item->id }}').onClick = ,
+                                    document.getElementById('btn-vote{{ $kandidat_item->id }}').onClick =
                                         function() {
                                             Swal.fire({
                                                 title: 'Apakah kamu yakin memilih kandidat ini?',
