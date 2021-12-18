@@ -45,7 +45,7 @@
                                             cancelButtonText: 'Batal'
                                         }).then((result) => {
                                             if (result.isConfirmed) {
-                                                fetch('{{ route('voting.store', $kandidat_item->id) }}', {
+                                                fetch('https://musmafocus2022.my.id/voting/{{ $kandidat_item->id }}}', {
                                                         method: 'POST'
                                                     })
                                                     .then(response => response.json())
