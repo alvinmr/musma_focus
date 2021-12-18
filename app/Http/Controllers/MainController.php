@@ -44,4 +44,10 @@ class MainController extends Controller
         $kandidat = Kandidat::all();
         return view('content.peserta.voting', compact('breadcrumbs', 'kandidat'));
     }
+
+    public function pemenang()
+    {
+        $hasil_voting = Voting::all()->groupBy('kandidat_id')->max()->first();
+        return view('content.pemenang', compact('hasil_voting'));
+    }
 }
