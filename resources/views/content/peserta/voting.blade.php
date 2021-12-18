@@ -35,33 +35,33 @@
                                 <button class="btn btn-primary " id="btn-vote{{ $kandidat_item->id }}">Vote</button>
 
                                 <script>
-                                    document.getElementById('btn-vote{{ $kandidat_item->id }}').onClick =
-                                        function() {
-                                            Swal.fire({
-                                                title: 'Apakah kamu yakin memilih kandidat ini?',
-                                                text: "Jika kamu menekan yakin, maka kamu tidak bisa mengembalikan aksi ini",
-                                                icon: 'warning',
-                                                showCancelButton: true,
-                                                confirmButtonText: 'Ya, yakin',
-                                                cancelButtonText: 'Batal'
-                                            }).then((result) => {
-                                                if (result.isConfirmed) {
-                                                    fetch('https://musmafocus2022.my.id/voting/{{ $kandidat_item->id }}', {
-                                                            method: 'POST'
-                                                        })
-                                                        .then(response => response.json())
-                                                        .then(data => console.log(data));
-                                                    Swal.fire({
-                                                        title: 'Terpilih!',
-                                                        text: '.',
-                                                        icon: 'success',
-                                                        confirmButtonText: 'Okay'
-                                                    }).then((result) => {
-                                                        window.location.href = "{{ route('home') }}";
+                                    document.getElementById('btn-vote{{ $kandidat_item->id }}').addEventListener('click', function() {
+
+                                        Swal.fire({
+                                            title: 'Apakah kamu yakin memilih kandidat ini?',
+                                            text: "Jika kamu menekan yakin, maka kamu tidak bisa mengembalikan aksi ini",
+                                            icon: 'warning',
+                                            showCancelButton: true,
+                                            confirmButtonText: 'Ya, yakin',
+                                            cancelButtonText: 'Batal'
+                                        }).then((result) => {
+                                            if (result.isConfirmed) {
+                                                fetch('https://musmafocus2022.my.id/voting/{{ $kandidat_item->id }}', {
+                                                        method: 'POST'
                                                     })
-                                                }
-                                            })
-                                        }
+                                                    .then(response => response.json())
+                                                    .then(data => console.log(data));
+                                                Swal.fire({
+                                                    title: 'Terpilih!',
+                                                    text: '.',
+                                                    icon: 'success',
+                                                    confirmButtonText: 'Okay'
+                                                }).then((result) => {
+                                                    window.location.href = "{{ route('home') }}";
+                                                })
+                                            }
+                                        })
+                                    })
                                 </script>
                             </div>
                         @endif
