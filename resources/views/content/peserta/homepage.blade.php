@@ -26,7 +26,7 @@
     </div>
     <!--/ Kick start -->
 
-    <div class="justify-content-center row">
+    {{-- <div class="justify-content-center row">
         <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="card">
                 <div class="card-header">
@@ -37,7 +37,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 @endsection
 
 @section('page-script')
